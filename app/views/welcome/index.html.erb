@@ -1,0 +1,24 @@
+
+<body>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+</div>
+  <div class="title">Our Menu</div>
+  <div></div><br>
+  <div class="container">
+    <div class="row">
+      <% @recipes.each do |recipe| %>
+          <div class="col-lg-4" style="background-color: black; margin: 20px;">
+            <div class="container-fluid" style="background-color: seagreen; margin-top:15px; margin-bottom: 15px">
+              <br>
+              <div>
+                <span class="project_title"><%= recipe.name %></span><br><br>
+                <span class="project_numbers"><%= recipe.price %></span>
+              </div>
+              <br>
+            </div>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</body>
