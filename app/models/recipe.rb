@@ -1,5 +1,4 @@
 class Recipe < ApplicationRecord
-  has_many :ingredient
+  has_and_belongs_to_many :ingredients
 
-  validates :ingredient, presence: true
 end

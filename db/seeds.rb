@@ -6,13 +6,45 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Ingredient.create(name: 'Cheese')
-Ingredient.create(name: 'Mushroom')
-Ingredient.create(name: 'Pineapple')
-Ingredient.create(name: 'Sausage')
-Ingredient.create(name: 'Pepperoni')
-Ingredient.create(name: 'Tomato')
-Ingredient.create(name: 'Ham')
+cheese = Ingredient.create(name: 'Cheese')
+mushroom = Ingredient.create(name: 'Mushroom')
+pineapple = Ingredient.create(name: 'Pineapple')
+sausage = Ingredient.create(name: 'Sausage')
+pepperoni = Ingredient.create(name: 'Pepperoni')
+tomato = Ingredient.create(name: 'Tomato')
+ham = Ingredient.create(name: 'Ham')
 
 
-Recipe.create(name: 'Cheese', price: '2', ingredient: 'Cheese')
+cheesep = Recipe.create(name: 'Cheese', price: '2')
+cheesep.ingredients << cheese
+cheesep.save
+
+hawaiian = Recipe.create(name: 'Hawaiian', price: '3')
+hawaiian.ingredients << cheese
+hawaiian.ingredients << pineapple
+hawaiian.ingredients << ham
+hawaiian.save
+
+pepperoni = Recipe.create(name: 'Pepperoni', price: '3')
+pepperoni.ingredients << cheese
+pepperoni.ingredients << pepperoni
+pepperoni.save
+
+meaty = Recipe.create(name: 'Meaty', price: '5')
+meaty.ingredients << cheese
+meaty.ingredients << sausage
+meaty.ingredients << ham
+meaty.save
+
+veggie = Recipe.create(name: 'Veggie', price: '3')
+veggie.ingredients << cheese
+veggie.ingredients << tomato
+veggie.ingredients << mushroom
+veggie.save
+
+margarita = Recipe.create(name: 'Margarita', price: '3')
+margarita.ingredients << cheese
+margarita.ingredients << tomato
+margarita.save
+
+
