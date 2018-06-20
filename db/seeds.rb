@@ -25,10 +25,10 @@ hawaiian.ingredients << pineapple
 hawaiian.ingredients << ham
 hawaiian.save
 
-pepperoni = Recipe.create(name: 'Pepperoni', price: '3')
-pepperoni.ingredients << cheese
-pepperoni.ingredients << pepperoni
-pepperoni.save
+pepperonip = Recipe.create(name: 'Pepperoni', price: '3')
+pepperonip.ingredients << cheese
+pepperonip.ingredients << pepperoni
+pepperonip.save
 
 meaty = Recipe.create(name: 'Meaty', price: '5')
 meaty.ingredients << cheese

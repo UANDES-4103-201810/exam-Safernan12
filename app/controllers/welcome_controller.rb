@@ -4,9 +4,7 @@ class WelcomeController < ApplicationController
   end
 
   def show
-
   end
-
   private
   def set_recipe
     @recipes = Recipe.find(params[:id])
